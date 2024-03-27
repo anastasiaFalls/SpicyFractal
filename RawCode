@@ -1,0 +1,88 @@
+
+#What it does:
+
+#The code generates a window displaying a colorful fractal pattern known as the Mandelbrot set,
+#Demonstrating the beauty of mathematics and how it can be visualized in the form of stunning fractal patterns.
+
+
+#You're going to need something that can run python to use this. obviously. LOOOOL
+
+
+
+#     ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
+
+# You're looking cute today, pookie. <3
+
+
+
+
+
+
+
+
+
+
+import pygame
+import colorsys
+
+# Function to calculate Mandelbrot set
+def mandelbrot(c, max_iter):
+    z = 0
+    n = 0
+    while abs(z) <= 2 and n < max_iter:
+        z = z*z + c
+        n += 1
+    return n
+
+# Function to convert iteration count to color
+def colorize(n, max_iter):
+    if n == max_iter:
+        return 0, 0, 0
+    else:
+        hue = int(255 * n / max_iter)
+        return colorsys.hsv_to_rgb(hue / 255, 1, 1)
+
+# Initialize pygame
+pygame.init()
+
+# Screen dimensions
+width, height = 800, 600
+
+# Set up display
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Mandelbrot Fractal")
+
+# Constants for Mandelbrot set
+max_iter = 100
+scale = 0.006
+offset_x, offset_y = -0.5, 0
+
+# Main loop
+running = True
+while running:
+    for x in range(width):
+        for y in range(height):
+            # Calculate real and imaginary parts of complex number
+            real = (x - width / 2) * scale + offset_x
+            imag = (y - height / 2) * scale + offset_y
+
+            # Calculate Mandelbrot value
+            c = complex(real, imag)
+            mand_val = mandelbrot(c, max_iter)
+
+            # Colorize based on Mandelbrot value
+            color = colorize(mand_val, max_iter)
+
+            # Draw pixel
+            screen.set_at((x, y), color)
+
+    # Update display
+    pygame.display.flip()
+
+    # Event handling
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+# Quit pygame
+pygame.quit()
