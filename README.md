@@ -5,7 +5,7 @@ These are factals/mathematics simulations in Python. Instructions how to run the
 They're awesome, check it out ;D 
 
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X4N8MRVX7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,3 +14,5 @@ They're awesome, check it out ;D
 
   gtag('config', 'G-8X4N8MRVX7');
 </script>
+
+--->
