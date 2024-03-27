@@ -1,0 +1,23 @@
+1. Make sure you have Python installed on your computer. You can download Python from the official website: https://www.python.org/downloads/
+
+2. Install the required dependencies. In this case, you need to install Pygame, which is used for graphics. You can install Pygame using pip, the Python package manager, by running the following command in your terminal or command prompt:
+   
+   ```
+   pip install pygame
+   ```
+
+3. Copy the Python code provided in the previous response and save it in a file, for example, `mandelbrot.py`.
+
+4. Open your terminal or command prompt and navigate to the directory where you saved the `mandelbrot.py` file.
+
+5. Run the Python script by typing the following command and pressing Enter:
+
+   ```
+   python mandelbrot.py
+   ```
+
+6. After running the command, a window should appear displaying the Mandelbrot fractal. You can explore the fractal by zooming in or out or by changing the parameters in the code to generate different fractal patterns.
+
+7. To exit the program, close the window or press Ctrl+C in the terminal or command prompt where the script is running.
+
+That's it! You should now be able to run the Python code and view the Mandelbrot fractal on your screen. Enjoy exploring the fascinating world of fractals!
